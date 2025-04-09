@@ -1,0 +1,8 @@
+.loginSection {
+    margin-top: 120px; /* Pushes the login form below the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+  
