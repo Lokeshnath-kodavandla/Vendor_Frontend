@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { API_URL } from '../../data/apiPath';
-import { ThreeDots } from 'react-loader-spinner';
+import { BeatLoader } from 'react-spinners';
 import './Register.css';
 
 const Register = ({ showLoginHandler }) => {
@@ -53,13 +53,12 @@ const Register = ({ showLoginHandler }) => {
     <div className="registerSection">
       {loading && 
         <div className="loaderSection">
-          <ThreeDots 
-            height="80" 
-            width="80" 
-            color="#f56f42" 
-            ariaLabel="three-dots-loading"
-            visible={true}
-          />
+           <BeatLoader
+              color="#f56f42"
+              size={15}
+              aria-label="beat-loader"
+              loading={true}
+            />
           <p>🛠️ Hi, Your Registration is under process...</p>
         </div>
       }

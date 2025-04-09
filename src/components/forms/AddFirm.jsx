@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { API_URL } from '../../data/apiPath';
-import { ThreeCircles } from 'react-loader-spinner';
+import { BeatLoader } from 'react-spinners';
 
 const AddFirm = () => {
   const [firmName, setFirmName] = useState("");
@@ -98,7 +98,7 @@ const AddFirm = () => {
     <div className="container mt-5">
       {loading && (
         <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "60vh" }}>
-          <ThreeCircles visible={loading} height={100} width={100} color="#4fa94d" ariaLabel="three-circles-loading" />
+           <BeatLoader loading={loading} size={20} color="#4fa94d" />
         </div>
       )}
 

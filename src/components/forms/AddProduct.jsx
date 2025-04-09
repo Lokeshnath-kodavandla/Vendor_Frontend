@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { API_URL } from '../../data/apiPath';
-import { ThreeDots } from 'react-loader-spinner';
+import { BeatLoader } from 'react-spinners';
 
 const inputStyle = { border: '1px solid black' };
 
@@ -82,12 +82,11 @@ const AddProduct = () => {
     <div className="container mt-4">
       {loading && (
         <div className="d-flex justify-content-center align-items-center flex-column">
-          <ThreeDots 
-              height="80" 
-              width="80" 
-              color="#f56f42" 
-              ariaLabel="three-dots-loading"
-              visible={true}
+           <BeatLoader
+              color="#f56f42"
+              size={15}
+              aria-label="beat-loader"
+              loading={true}
             />
           <p>⏳ Please wait, your product is being added...</p>
         </div>
